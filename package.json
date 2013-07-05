@@ -1,0 +1,25 @@
+{
+  "name": "linearRegression",
+  "version": "0.0.1",
+  "description": "Javascript implementation of linear regression with gradient descent",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js example_data.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lastlegion/linearReg.js.git"
+  },
+  "keywords": [
+    "linearRegression",
+    "gradientDescent",
+    "machineLearning"
+  ],
+  "author": "Ganesh Iyer <lastlegion@gmail.com> (http://ganeshiyer.net/)",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "f552743d3fe01110e63a9eb710268e10510ff790",
+  "bugs": {
+    "url": "https://github.com/lastlegion/linearReg.js/issues"
+  }
+}
