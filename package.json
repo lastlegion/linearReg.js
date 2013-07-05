@@ -1,5 +1,5 @@
 {
-  "name": "linearRegression",
+  "name": "lineareg",
   "version": "0.0.1",
   "description": "Javascript implementation of linear regression with gradient descent",
   "main": "app.js",

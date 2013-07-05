@@ -2,7 +2,7 @@ var fs = require('fs'),
     sylvester = require('sylvester'),
     Matrix = sylvester.Matrix,
     Vector = sylvester.Vector,
-    linearReg = require('./lib/linearReg');
+    lineareg= require('./lib/lineareg');
 
 
 function parseInput(fileName, X, y, callback){
@@ -32,7 +32,7 @@ var main = function(){
     parseInput(input_file, X, y, function(){       
                
         //Vectorize training data
-        var trainingData = linearReg.prepareTrainingData(X,y,theta);      
+        var trainingData = lineareg.prepareTrainingData(X,y,theta);      
         X_mat = trainingData["X_mat"];
         y_vec = trainingData["y_vec"];
         theta_vec = trainingData["theta_vec"];
@@ -41,10 +41,10 @@ var main = function(){
         var iterations = 2500;
         var alpha = 0.01;
 
-        var J = linearReg.computeCost(X_mat, y_vec, theta_vec);
+        var J = lineareg.computeCost(X_mat, y_vec, theta_vec);
         console.log("old cost "+J);
-        theta_vec = linearReg.gradientDescent(X_mat,y_vec,theta_vec, alpha, iterations);
-        var J_new = linearReg.computeCost(X_mat, y_vec, theta_vec)
+        theta_vec = lineareg.gradientDescent(X_mat,y_vec,theta_vec, alpha, iterations);
+        var J_new = lineareg.computeCost(X_mat, y_vec, theta_vec)
         console.log("new cost "+ J_new);
     });
 
