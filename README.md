@@ -4,7 +4,7 @@ A javascript implementation of linear regression. Lossely based on Prof. Ng's [M
 
 Uses Sylvester for linear algebra.
 
-    ```
-        npm install sylevster
-    ```
+
+`npm install sylevster`
+    
     
