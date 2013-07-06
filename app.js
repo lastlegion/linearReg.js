@@ -27,7 +27,7 @@ var main = function(){
     }
     var X = [] //features
     var y = [] //labels
-    var theta = [0,0];  //linear regression parameters
+    var theta = [];  //linear regression parameters
 
     parseInput(input_file, X, y, function(){       
                
