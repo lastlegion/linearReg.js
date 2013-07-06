@@ -2,7 +2,7 @@
   "name": "lineareg",
   "version": "0.0.1",
   "description": "Javascript implementation of linear regression with gradient descent",
-  "main": "app.js",
+  "main": "lib/lineareg.js",
   "scripts": {
     "test": "node app.js example_data.txt"
   },

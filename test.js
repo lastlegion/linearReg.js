@@ -2,7 +2,7 @@ var fs = require('fs'),
     sylvester = require('sylvester'),
     Matrix = sylvester.Matrix,
     Vector = sylvester.Vector,
-    lineareg= require('./lib/lineareg');
+    lineareg= require('lineareg');
 
 
 function parseInput(fileName, X, y, callback){
