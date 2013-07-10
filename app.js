@@ -11,8 +11,11 @@ function parseInput(fileName, X, y, callback){
         for(var i=0; i<lines.length; i++){
             var line = lines[i].split(",");
             if(!line[0] ==""){
-                X[i] = line[0];
-                y[i] = line[1];
+                X[i] = line.splice(0, line.length - 1);
+                for(var j=0; j<X[i].length; j++){
+                    X[i][j] = X[i][j]*1;
+                }
+                y[i] = line[0];
             }
         }
         callback();
@@ -33,10 +36,11 @@ var main = function(){
                
         //Vectorize training data
         var trainingData = lineareg.prepareTrainingData(X,y,theta);      
-        X_mat = trainingData["X_mat"];
-        y_vec = trainingData["y_vec"];
-        theta_vec = trainingData["theta_vec"];
+        var X_mat = trainingData["X_mat"];
+        var y_vec = trainingData["y_vec"];
+        var theta_vec = trainingData["theta_vec"];
         
+        X_mat = lineareg.featureNorm(X_mat);
         //Configurations for gradient descent
         var iterations = 2500;
         var alpha = 0.01;
